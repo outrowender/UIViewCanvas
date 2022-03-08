@@ -14,7 +14,9 @@ Run emulator everytime you need to test a small change in your ViewController is
 ## How to use?
 
 ### Step 1
-TODO: install instructions
+Select your project on Xcode and go to `Files` > `Add Packages` and paste this repository URL `https://github.com/outrowender/UIViewCanvas` on search field.
+
+Select a version and click `Install`.
 
 ### Step 2
 Add the previewer to your view controller file:
