@@ -1,15 +1,16 @@
 # UIViewCanvas
 
-This package allows you to enable a SwiftUI Xcode canva to a ViewController.
+This package allows you to enable a SwiftUI Xcode canva to a UIView or a entire ViewController.
 
 ## Why?
 
-Run emulator everytime you need to test a small change in your ViewController is painfull.
+Run emulator everytime you need to test a small change in your View is painfull.
 
 ## Requirements
 
-[x] Xcode 13
-[x] A UIKit project
+&check; Xcode 11+ <br>
+&check; Swift 4.2+ <br>
+&check; iOS 13+ project <br>
 
 ## How to use?
 
@@ -19,24 +20,26 @@ Select your project on Xcode and go to `Files` > `Add Packages` and paste this r
 Select a version and click `Install`.
 
 ### Step 2
-Add the previewer to your view controller file:
+Add the previewer to your view file:
 
 ```swift
 import SwiftUI
+import UIViewCanvas
+
 struct MyPreview: PreviewProvider {
     static var previews: some View {
-        Text("Example preview")
+        //Text("Example preview")
     }
 }
 ```  
 
-Now you can instantiate your ViewController as a SwiftUI component:
+Now you can instantiate your View as a SwiftUI component:
 
 ```swift
-import SwiftUI
 struct MyPreview: PreviewProvider {
     static var previews: some View {
-        ViewControllerCanvas(for: MyViewController())
+        ViewCanvas(for: MyCustomView())
+        // or //ViewControllerCanvas(for: MyViewController())
     }
 }
 ```  
@@ -44,7 +47,6 @@ struct MyPreview: PreviewProvider {
 If you want a better preview, check `Group` component and use a `.previewLayout` to set a custom canvas to your preview.
 
 ```swift
-import SwiftUI
 struct MyPreview: PreviewProvider {
     static var previews: some View {
         Group{
@@ -55,7 +57,7 @@ struct MyPreview: PreviewProvider {
 ```
 
 ### Step 3
-Profit!
+Run `⌥ + ⌘ + p` to resume your canvas.
 
 ## Credits
 

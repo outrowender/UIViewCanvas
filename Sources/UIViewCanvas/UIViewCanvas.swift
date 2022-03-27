@@ -9,21 +9,6 @@ import UIKit
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-public struct ViewControllerCanvas: UIViewControllerRepresentable {
-    private let view: UIViewController
-    
-    public init(for view: UIViewController){
-        self.view = view
-    }
-    
-    public func makeUIViewController(context: Context) -> some UIViewController {
-        return view
-    }
-    
-    public func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-    }
-}
-
 public struct ViewCanvas: UIViewRepresentable {
     private let view: UIView
     
@@ -36,6 +21,21 @@ public struct ViewCanvas: UIViewRepresentable {
     }
     
     public func updateUIView(_ view: UIView, context: Context) {
+    }
+}
+
+public struct ViewControllerCanvas: UIViewControllerRepresentable {
+    private let view: UIViewController
+    
+    public init(for view: UIViewController){
+        self.view = view
+    }
+    
+    public func makeUIViewController(context: Context) -> some UIViewController {
+        return view
+    }
+    
+    public func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
     }
 }
 
