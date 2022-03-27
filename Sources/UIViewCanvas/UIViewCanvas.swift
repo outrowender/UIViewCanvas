@@ -9,14 +9,14 @@ import UIKit
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-struct UIKitCanvas: UIViewRepresentable {
+public struct UIKitCanvas: UIViewRepresentable {
     let view: UIView
     
-    func makeUIView(context: Context) -> UIView {
+    public func makeUIView(context: Context) -> UIView {
         return view
     }
     
-    func updateUIView(_ view: UIView, context: Context) {
+    public func updateUIView(_ view: UIView, context: Context) {
     }
 }
 
