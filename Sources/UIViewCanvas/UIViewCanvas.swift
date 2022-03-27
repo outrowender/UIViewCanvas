@@ -5,15 +5,19 @@
 //  Created by Wender Patrick on 08/03/22.
 
 import UIKit
+
+#if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-struct UIKitCanvas: UIViewControllerRepresentable {
-    let view: UIViewController
+struct UIKitCanvas: UIViewRepresentable {
+    let view: UIView
     
-    func makeUIViewController(context: Context) -> some UIViewController {
+    func makeUIView(context: Context) -> UIView {
         return view
     }
     
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    func updateUIView(_ view: UIView, context: Context) {
     }
 }
+
+#endif
