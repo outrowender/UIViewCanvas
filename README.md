@@ -2,6 +2,8 @@
 
 This package allows you to enable a SwiftUI Xcode canva to a UIView or a entire ViewController.
 
+<img src="docs/images/xcode-screenshot1.png">
+
 ## Why?
 
 Run emulator everytime you need to test a small change in your View is painfull.
