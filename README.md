@@ -36,7 +36,7 @@ Now you can instantiate your ViewController as a SwiftUI component:
 import SwiftUI
 struct MyPreview: PreviewProvider {
     static var previews: some View {
-        UIKitCanvas(view: MyViewController())
+        ViewControllerCanvas(for: MyViewController())
     }
 }
 ```  
@@ -48,7 +48,7 @@ import SwiftUI
 struct MyPreview: PreviewProvider {
     static var previews: some View {
         Group{
-            UIKitCanvas(view: MyViewController())
+            ViewControllerCanvas(for: MyViewController())
         }.previewLayout(.fixed(width: 350, height: 350))
     }
 }
