@@ -22,7 +22,7 @@ Select your project on Xcode and go to `Files` > `Add Packages` and paste this r
 Select a version and click `Install`.
 
 ### Step 2
-Add the previewer to your view file:
+Add the previewer to the end of your view file:
 
 ```swift
 import SwiftUI
@@ -30,36 +30,38 @@ import UIViewCanvas
 
 struct MyPreview: PreviewProvider {
     static var previews: some View {
-        //Text("Example preview")
+        ViewCanvas(for: MyCustomUIView())
     }
 }
 ```  
 
-Now you can instantiate your View as a SwiftUI component:
+You can instantiate a entire ViewController as well, using `ViewControllerCanvas`:
 
 ```swift
 struct MyPreview: PreviewProvider {
     static var previews: some View {
-        ViewCanvas(for: MyCustomView())
-        // or //ViewControllerCanvas(for: MyViewController())
+        ViewControllerCanvas(for: MyViewController())
     }
 }
 ```  
 
-If you want a better preview, check `Group` component and use a `.previewLayout` to set a custom canvas to your preview.
+If you want to customize your preview, check `Group` component and use a `.previewLayout` to set a custom canvas to your preview.
 
 ```swift
 struct MyPreview: PreviewProvider {
     static var previews: some View {
         Group{
-            ViewControllerCanvas(for: MyViewController())
-        }.previewLayout(.fixed(width: 350, height: 350))
+            ViewCanvas(for: MyCustomUIView())
+        }
+        .previewLayout(.fixed(width: 350, height: 350))
     }
 }
 ```
 
 ### Step 3
-Run `⌥ + ⌘ + p` to resume your canvas.
+You may need to reopen your `.swift` file in Xcode.
+
+You can use `⌥ + ⌘ + P` to quickly resume your canvas.
 
 ## Credits
 
