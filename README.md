@@ -1,6 +1,6 @@
 # UIViewCanvas
 
-This package allows you to enable a SwiftUI Xcode canva to a UIView or a entire ViewController.
+This package allows you to quickly setup Xcode canvas to any UIView/ViewController.
 
 <img src="docs/images/xcode-screenshot1.png">
 
