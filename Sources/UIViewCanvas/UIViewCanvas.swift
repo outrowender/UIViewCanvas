@@ -6,7 +6,7 @@
 
 import UIKit
 
-#if canImport(SwiftUI) && DEBUG
+#if canImport(SwiftUI)
 import SwiftUI
 
 public struct ViewCanvas: UIViewRepresentable {
